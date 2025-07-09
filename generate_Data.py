@@ -42,7 +42,7 @@ def create_packet_record(pkt, label):
 
 # 1. Simulate Normal Traffic
 print("[*] Generating normal traffic...")
-for i in range(100):
+for i in range(10000):
     pkt = IP(src="192.168.1.10", dst="192.168.1.1") / \
         TCP(sport=12345, dport=80)
     create_packet_record(pkt, 0)
@@ -50,7 +50,7 @@ for i in range(100):
 
 # 2. Simulate TCP Anomalous Traffic
 print("[*] Generating anomalous TCP packets...")
-for i in range(50):
+for i in range(1000):
     pkt = IP(src="192.167.5.200", dst="192.167.5.35") / \
         TCP(sport=random.randint(50000, 60000), dport=random.randint(50000, 60000)) / \
         ("X" * random.randint(5, 1000))
@@ -59,7 +59,7 @@ for i in range(50):
 
 # 3. Simulate UDP Flood Attack
 print("[*] Generating UDP flood packets...")
-for i in range(100):
+for i in range(1000):
     src_ip = f"192.168.29.{random.randint(10, 100)}"
     pkt = IP(src=src_ip, dst="192.168.29.13") / UDP(sport=random.randint(1024, 65535), dport=8080) / \
         bytes(random.randint(20, 100))
