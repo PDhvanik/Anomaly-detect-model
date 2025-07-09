@@ -1,5 +1,9 @@
 # Network Anomaly Detection Project
 
+**Frontend:** [https://github.com/neelpatel2003/Anomaly-Detection](https://github.com/neelpatel2003/Anomaly-Detection)
+
+**Backend:** [https://github.com/PDhvanik/Anomaly-Detection-Backend](https://github.com/PDhvanik/Anomaly-Detection-Backend)
+
 ## Overview
 
 This project provides a framework for simulating, detecting, and analyzing network traffic anomalies, including DDoS and other malicious activities. It includes tools for generating labeled network traffic data, training a machine learning model to detect anomalies, and scripts to simulate both normal and attack traffic.
